@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+
+.html-bg {
+  width: 100%;
+  /* Add your background pattern here */
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+}
+
+.containerPattern {
+  width: 100%;
+  /* Add your background pattern here */
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+}
+
+#wrapper {
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+#sideContainer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 0px 0px 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 90%;
+}
+
+#loginImg {
+  height: 80%;
+  width: 90%;
+  position: relative;
+  background-image: url(./assets/loginImage.jpg);
+  background-size: cover;
+  background-position: 40%;
+  background-repeat: no-repeat;
+}
+
+#registerImg {
+  height: 80%;
+  width: 90%;
+  position: relative;
+  background-image: url(./assets/registerImage.jpg);
+  background-size: cover;
+  background-position: 80%;
+  background-repeat: no-repeat;
+}
+
+.topWaveContainer {
+  width: 100%;
+  height: 50vh;
+  /* Altura de la mitad superior */
+  overflow: hidden;
+  /* Ocultar la parte inferior del SVG */
+  position: fixed;
+  /* Fijar en la parte inferior */
+  top: -200px;
+  /* Colocar en la parte inferior */
+  filter: drop-shadow(10px 0 15px rgb(94, 94, 94));
+}
+
+.loginSvgContainer,
+.registerSvgContainer {
+  display: flex;
+  justify-content: center;
+  filter: brightness(0) invert(1) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+
+}
+
+.loginSvg {
+  width: 13%;
+  height: 7%;
+  min-height: 80px;
+  min-width: 180px;
+}
+
+.bottomWaveContainer {
+  width: 100%;
+  height: 50vh;
+  /* Altura de la mitad superior */
+  overflow: hidden;
+  /* Ocultar la parte inferior del SVG */
+  position: fixed;
+  /* Fijar en la parte inferior */
+  bottom: -300px;
+  /* Colocar en la parte inferior */
+  filter: drop-shadow(-5px 0 15px rgb(94, 94, 94));
+}
+
+.loginFooter {
+  padding-top: 12%;
+  margin-top: 0 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.loginTitle {
+  margin-top: 5% !important;
+
+}
+
+
+#signInBut:active {
+  transform: scale(95%);
+  transition: all ease-in-out 0.1s;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.errorSpan {
+  margin-top: 1em;
+  text-align: left;
+  display: block;
+  font-size: 14px;
+  width: 100% !important;
+  color: rgb(247, 82, 82);
+
+}
+
+.lp-svgLogo {
+  display: flex;
+  width: fit-content;
+}
+
+.headerSvg {
+  width: 100%;
+  max-width: 150px;
+  min-width: 100px;
+}
+
+
+/*------------------------------------------------------------MEDIA QUERIES------------------------------------------------------------*/
+
+@media (max-width: 300px) {
+  .loginFooter {
+    display: none;
+  }
+}
+
+/*Mostrar elementos a partir de breakpoint md*/
+@media (min-width: 768px) {
+
+  .html-bg {
+    background: rgb(226, 226, 226);
+    background: linear-gradient(145deg, rgb(236, 236, 236) 0%, rgba(255, 255, 255, 1) 35%, rgb(236, 236, 236) 100%);
+  }
+
+  #sideContainer {
+    display: flex;
+  }
+
+
+}
+
+/*Mostrar elementos a partir del breakpoint 2xl*/
+@media (min-width: 1536px) {
+  .loginSvgContainer {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+
+  .registerSvgContainer {
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}
+
+@tailwind utilities;
