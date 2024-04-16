@@ -168,7 +168,7 @@ export const LoginPage = () => {
                         </div>
 
                         <div className="text-slate-200 text-center loginFooter">
-                            <p className="w-fit poppins-light">All rights reserved<strong className="poppins-bold-italic"> © Daniel Vicent Luna</strong></p>
+                            <p className="w-fit poppins-light text-sm">All rights reserved<strong className="poppins-bold-italic"> © Daniel Vicent Luna</strong></p>
                         </div>
 
                     </div>
